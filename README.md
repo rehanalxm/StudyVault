@@ -4,6 +4,12 @@ A modern full-stack web application for managing and accessing academic study ma
 
 ![StudyVault Banner](https://img.shields.io/badge/StudyVault-Academic%20Resource%20Hub-6366f1?style=for-the-badge)
 
+## 🔗 Live Demo
+
+**🌐 [Live Application](https://study-vault-k85kp0u4z-rehanalxms-projects.vercel.app)** | **🔐 [Admin Panel](https://study-vault-k85kp0u4z-rehanalxms-projects.vercel.app/admin)** | **📖 [Deployment Guide](DEPLOYMENT.md)**
+
+> **Admin Credentials:** Username: `admin` | Password: `admin123`
+
 ## ✨ Features
 
 ### 👨‍🎓 For Students
