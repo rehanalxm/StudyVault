@@ -70,7 +70,7 @@ function App() {
                 © {new Date().getFullYear()} StudyVault. All rights reserved.
               </p>
               <a
-                href="https://rehanalxm.github.io/My-Portfolio/"
+                href="https://rehanportfolio.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-sm text-gray-500 hover:text-primary transition-colors group"
