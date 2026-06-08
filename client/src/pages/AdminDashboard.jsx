@@ -56,7 +56,7 @@ const AdminDashboard = () => {
             setNewSubject({ name: '', year: '1st Year', semester: '' });
             fetchSubjects();
             showToast('Subject Added Successfully!');
-        } catch (err) {
+        } catch {
             showToast('Error adding subject', 'error');
         }
     };
@@ -95,7 +95,7 @@ const AdminDashboard = () => {
             await axios.delete(`${import.meta.env.VITE_API_URL}/materials/${id}`);
             fetchMaterials();
             showToast('Material deleted successfully');
-        } catch (err) {
+        } catch {
             showToast('Error deleting material', 'error');
         }
     };
@@ -130,7 +130,7 @@ const AdminDashboard = () => {
             await axios.delete(`${import.meta.env.VITE_API_URL}/notices/${id}`);
             fetchNotices();
             showToast('Notice deleted');
-        } catch (err) {
+        } catch {
             showToast('Error deleting notice', 'error');
         }
     };

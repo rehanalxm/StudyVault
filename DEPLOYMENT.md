@@ -71,7 +71,7 @@ Before deploying, ensure you have:
    - **Branch**: `main` or `master`
    - **Root Directory**: `server`
    - **Runtime**: `Node`
-   - **Build Command**: `npm install`
+   - **Build Command**: `npm install --legacy-peer-deps` (to avoid peer dependency conflicts)
    - **Start Command**: `npm start`
    - **Instance Type**: Free
 

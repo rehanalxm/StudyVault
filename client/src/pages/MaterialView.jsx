@@ -13,14 +13,14 @@ const MaterialView = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const matRes = await axios.get(`${import.meta.env.VITE_API_URL}/materials?subjectId=${subjectId}`);
+                const [matRes, subRes] = await Promise.all([
+                    axios.get(`${import.meta.env.VITE_API_URL}/materials?subjectId=${subjectId}`),
+                    axios.get(`${import.meta.env.VITE_API_URL}/subjects/${subjectId}`)
+                ]);
                 setMaterials(matRes.data);
-
-                if (matRes.data.length > 0 && matRes.data[0].subjectId) {
-                    setSubject(matRes.data[0].subjectId);
-                }
+                setSubject(subRes.data);
             } catch (err) {
-                console.error(err);
+                console.error("Error fetching subject materials/details:", err);
             } finally {
                 setLoading(false);
             }

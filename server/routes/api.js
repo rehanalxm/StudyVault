@@ -118,6 +118,20 @@ router.get('/subjects', async (req, res) => {
     }
 });
 
+// Get a single subject by ID
+router.get('/subjects/:id', async (req, res) => {
+    try {
+        const subject = await Subject.findById(req.params.id);
+        if (!subject) {
+            return res.status(404).json({ error: 'Subject not found' });
+        }
+        res.json(subject);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+
 // Get materials for a subject
 router.get('/materials', async (req, res) => {
     try {

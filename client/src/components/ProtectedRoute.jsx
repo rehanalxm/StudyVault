@@ -11,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
             if (!session.isAuthenticated) return false;
 
             return true;
-        } catch (e) {
+        } catch {
             return false;
         }
     };
